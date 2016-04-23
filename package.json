@@ -1,6 +1,6 @@
 {
   "name": "autoit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "nodejs autoit(x) warpper",
   "license": "MIT",
   "repository": {
@@ -18,7 +18,12 @@
   "scripts": {
   },
   "files": [
-    "index.js"
+    "index.js",
+    "wchar.js",
+    "test.js",
+    "AutoItX3.dll",
+    "AutoItX3_x64.dll",
+    "AutoItX3_DLL.h"
   ],
   "keywords": [
     "nodejs",
@@ -27,8 +32,8 @@
   "dependencies": {
     "ffi": "2.0.0",
     "ref": "1.2.0",
-    "ref-wchar": "1.0.1",
-    "ref-struct": "1.0.2"
+    "ref-struct": "1.0.2",
+    "iconv": "~2.1.10"
   },
   "devDependencies": {
   },

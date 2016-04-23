@@ -6,7 +6,7 @@ var path = require('path');
 var fs = require('fs');
 var os = require('os');
 var Struct = require('ref-struct');
-var wchar_t = require('ref-wchar');
+var wchar_t = require(path.join(__dirname, 'wchar.js'));
 var wchar_string = wchar_t.string;
 
 function get_dll(){
