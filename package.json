@@ -1,0 +1,45 @@
+{
+  "name": "autoit",
+  "version": "1.0.0",
+  "description": "nodejs autoit(x) warpper",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xhawk18/node-autoit.git"
+  },
+  "author": {
+    "name": "xhawk18",
+    "email": "xhawk18@gmail.com",
+    "url": "https://github.com/xhawk18"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "nodejs",
+    "ffi"
+  ],
+  "dependencies": {
+    "ffi": "2.0.0",
+    "ref": "1.2.0",
+    "ref-wchar": "1.0.1",
+    "ref-struct": "1.0.2"
+  },
+  "devDependencies": {
+  },
+  "readme": "",
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/xhawk18/node-autoit/issues"
+  },
+  "homepage": "https://github.com/xhawk18/node-autoit#readme",
+  "_id": "autoit@1.0.0",
+  "_shasum": "",
+  "_resolved": "https://registry.npmjs.org/autoit/-/autoit-1.0.0.tgz",
+  "_from": ""
+}
