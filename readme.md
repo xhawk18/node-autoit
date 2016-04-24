@@ -18,290 +18,310 @@ au.Send("Hello, autoit & nodejs!");
 ```
 
 ## API
-### Init()
+### API parameters
+#### Type of API parameters
+    Parameter starts with "sz" is a string, for example: szOption, szText
+    Parameter starts with "n" is an integer, for example: nValue
+    Parameter starts with "h" is a handler, which is essentially an integer, for example: hWnd, hCtrl
 
-### error(void)
-    Return: Integer
+#### About the default parameters
+    You can call the functions with default parameters.
+    For example --
+        ControlCommand(szTitle [, szText], szControl, szCommand [, szExtra] [, nBufSize])
+    you can call it with the last two parameters omitted --
+```js
+        au.ControlCommand("[Class:Notepad]", "", "[CLASS:Edit]", "IsVisible")
+```
+    If you would like to use the default value of second parameters "szText", please fill it with undefined,
+```js
+        au.ControlCommand("[Class:Notepad]", undefined, "[CLASS:Edit]", "IsVisible")
+```
 
-### AutoItSetOption(szOption, nValue)
-    Return: Integer
+### API list
+#### Init()
 
-### ClipGet([nBufSize])
+#### error()
+    Return: integer
+
+#### AutoItSetOption(szOption, nValue)
+    Return: integer
+
+#### ClipGet([nBufSize])
     Return: szClip
 
-### ClipPut(szClip)
+#### ClipPut(szClip)
 
-### ControlClick(szTitle [, szText], szControl [, szButton] [, nNumClicks] [, nX] [, nY])
+#### ControlClick(szTitle [, szText], szControl [, szButton] [, nNumClicks] [, nX] [, nY])
     Return: integer
-### ControlClick(hWnd, hCtrl [, szButton] [, nNumClicks] [, nX] [, nY])
+#### ControlClick(hWnd, hCtrl [, szButton] [, nNumClicks] [, nX] [, nY])
     Return: integer
     
-### ControlCommand(szTitle [, szText], szControl, szCommand [, szExtra] [, nBufSize])
+#### ControlCommand(szTitle [, szText], szControl, szCommand [, szExtra] [, nBufSize])
     Return: szResult
-### ControlCommand(hWnd, hCtrl, szCommand [, szExtra] [, nBufSize])
-    Return: szResult
-
-### ControlListView(szTitle [, szText], szControl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
-    Return: szResult
-### ControlListView(hWnd, hCtrl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
+#### ControlCommand(hWnd, hCtrl, szCommand [, szExtra] [, nBufSize])
     Return: szResult
 
-### ControlDisable(szTitle [, szText], szControl)
-    Return: Integer
-### ControlDisable(hWnd, hCtrl)
-    Return: Integer
+#### ControlListView(szTitle [, szText], szControl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
+    Return: szResult
+#### ControlListView(hWnd, hCtrl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
+    Return: szResult
 
-### ControlEnable(szTitle [, szText], szControl)
-    Return: Integer
-### ControlEnable(hWnd, hCtrl)
-    Return: Integer
+#### ControlDisable(szTitle [, szText], szControl)
+    Return: integer
+#### ControlDisable(hWnd, hCtrl)
+    Return: integer
+
+#### ControlEnable(szTitle [, szText], szControl)
+    Return: integer
+#### ControlEnable(hWnd, hCtrl)
+    Return: integer
     
-### ControlFocus(szTitle [, szText], szControl)
-    Return: Integer
-### ControlFocus(hWnd, hCtrl)
-    Return: Integer
+#### ControlFocus(szTitle [, szText], szControl)
+    Return: integer
+#### ControlFocus(hWnd, hCtrl)
+    Return: integer
 
-### ControlGetFocus(szTitle [, szText] [, nBufSize])
+#### ControlGetFocus(szTitle [, szText] [, nBufSize])
     Return: szControlWithFocus
-### ControlGetFocus(hWnd [, nBufSize])
+#### ControlGetFocus(hWnd [, nBufSize])
     Return: szControlWithFocus
 
-### ControlGetHandle(hWnd, szControl)
+#### ControlGetHandle(hWnd, szControl)
     Return: hCtrl
 
-### ControlGetHandleAsText(szTitle [, szText], szControl [, nBufSize])
+#### ControlGetHandleAsText(szTitle [, szText], szControl [, nBufSize])
     Return: szRetText
     
-### ControlGetPos(szTitle [, szText], szControl)
+#### ControlGetPos(szTitle [, szText], szControl)
     Return: lpRect
-### ControlGetPos(hWnd, hCtrl)
+#### ControlGetPos(hWnd, hCtrl)
     Return: lpRect
 
-### ControlGetText(szTitle [, szText], szControl [, nBufSize])
+#### ControlGetText(szTitle [, szText], szControl [, nBufSize])
     Return: szControlText
-### ControlGetText(hWnd, hCtrl [, nBufSize])
+#### ControlGetText(hWnd, hCtrl [, nBufSize])
     Return: szControlText
 
-### ControlHide(szTitle [, szText], szControl)
-    Return: Integer
-### ControlHide(hWnd, hCtrl)
-    Return: Integer
+#### ControlHide(szTitle [, szText], szControl)
+    Return: integer
+#### ControlHide(hWnd, hCtrl)
+    Return: integer
     
-### ControlMove(szTitle [, szText], szControl, nX, nY [, nWidth] [, nHeight])
-    Return: Integer
-### ControlMove(hWnd, hCtrl, nX, nY [, nWidth] [, nHeight])
-    Return: Integer
+#### ControlMove(szTitle [, szText], szControl, nX, nY [, nWidth] [, nHeight])
+    Return: integer
+#### ControlMove(hWnd, hCtrl, nX, nY [, nWidth] [, nHeight])
+    Return: integer
 
-### ControlSend(szTitle [, szText], szControl, szSendText [, nMode])
-    Return: Integer
-### ControlSend(hWnd, hCtrl, szSendText [, nMode])
-    Return: Integer
+#### ControlSend(szTitle [, szText], szControl, szSendText [, nMode])
+    Return: integer
+#### ControlSend(hWnd, hCtrl, szSendText [, nMode])
+    Return: integer
 
-### ControlSetText(szTitle [, szText], szControl, szControlText)
-    Return: Integer
-### ControlSetText(hWnd, hCtrl, szControlText)
-    Return: Integer
+#### ControlSetText(szTitle [, szText], szControl, szControlText)
+    Return: integer
+#### ControlSetText(hWnd, hCtrl, szControlText)
+    Return: integer
 
-### ControlShow(szTitle [, szText], szControl)
-    Return: Integer
-### ControlShow(hWnd, hCtrl)
-    Return: Integer
+#### ControlShow(szTitle [, szText], szControl)
+    Return: integer
+#### ControlShow(hWnd, hCtrl)
+    Return: integer
 
-### ControlTreeView(szTitle [, szText], szControl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
+#### ControlTreeView(szTitle [, szText], szControl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
     Return: szResult
-### ControlTreeView(hWnd, hCtrl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
+#### ControlTreeView(hWnd, hCtrl, szCommand [, szExtra1] [, szExtra2] [, nBufSize])
     Return: szResult
 
-### DriveMapAdd(szDevice, szShare, nFlags [, szUser] [, szPwd] [, nBufSize])
+#### DriveMapAdd(szDevice, szShare, nFlags [, szUser] [, szPwd] [, nBufSize])
     Return: szResult
-### DriveMapDel(szDevice)
-    Return: Integer
-### DriveMapGet(szDevice [, nBufSize])
+#### DriveMapDel(szDevice)
+    Return: integer
+#### DriveMapGet(szDevice [, nBufSize])
     Return: szMapping
 
-### IsAdmin()
-    Return: Integer
+#### IsAdmin()
+    Return: integer
 
-### MouseClick([szButton] [, nX] [, nY] [, nClicks] [, nSpeed])
-    Return: Integer
-### MouseClickDrag(szButton, nX1, nY1, nX2, nY2 [, nSpeed])
-    Return: Integer
-### MouseDown([szButton])
-### MouseGetCursor()
-    Return: Integer
-### MouseGetPos()
+#### MouseClick([szButton] [, nX] [, nY] [, nClicks] [, nSpeed])
+    Return: integer
+#### MouseClickDrag(szButton, nX1, nY1, nX2, nY2 [, nSpeed])
+    Return: integer
+#### MouseDown([szButton])
+#### MouseGetCursor()
+    Return: integer
+#### MouseGetPos()
     Return: lpPoint
-### MouseMove(nX, nY [, nSpeed])
-    Return: Integer
-### MouseUp([szButton])
-### MouseWheel(szDirection, nClicks)
+#### MouseMove(nX, nY [, nSpeed])
+    Return: integer
+#### MouseUp([szButton])
+#### MouseWheel(szDirection, nClicks)
 
-### Opt(szOption, nValue)
-    Return: Integer
+#### Opt(szOption, nValue)
+    Return: integer
 
-### PixelChecksum(lpRect [, nStep])
-    Return: Integer
-### PixelGetColor(nX, nY)
-    Return: Integer
-### PixelSearch(lpRect, nCol [, nVar] [, nStep])
+#### PixelChecksum(lpRect [, nStep])
+    Return: integer
+#### PixelGetColor(nX, nY)
+    Return: integer
+#### PixelSearch(lpRect, nCol [, nVar] [, nStep])
     Return: pPointResult
-### ProcessClose(szProcess)
-    Return: Integer
-### ProcessExists(szProcess)
-    Return: Integer
-### ProcessSetPriority(szProcess, nPriority)
-    Return: Integer
-### ProcessWait(szProcess [, nTimeout])
-    Return: Integer
-### ProcessWaitClose(szProcess [, nTimeout])
-    Return: Integer
+#### ProcessClose(szProcess)
+    Return: integer
+#### ProcessExists(szProcess)
+    Return: integer
+#### ProcessSetPriority(szProcess, nPriority)
+    Return: integer
+#### ProcessWait(szProcess [, nTimeout])
+    Return: integer
+#### ProcessWaitClose(szProcess [, nTimeout])
+    Return: integer
 
-### Run(szProgram [, szDir] [, nShowFlag]);
-    Return: Integer
-### RunWait(szProgram [, szDir] [, nShowFlag]);
-    Return: Integer
-### RunAs(szUser, szDomain, szPassword, nLogonFlag, szProgram [, szDir] [, nShowFlag])
-    Return: Integer
-### RunAsWait(szUser, szDomain, szPassword, nLogonFlag, szProgram [, szDir] [, nShowFlag])
-    Return: Integer
+#### Run(szProgram [, szDir] [, nShowFlag]);
+    Return: integer
+#### RunWait(szProgram [, szDir] [, nShowFlag]);
+    Return: integer
+#### RunAs(szUser, szDomain, szPassword, nLogonFlag, szProgram [, szDir] [, nShowFlag])
+    Return: integer
+#### RunAsWait(szUser, szDomain, szPassword, nLogonFlag, szProgram [, szDir] [, nShowFlag])
+    Return: integer
 
-### Send(szSendText [, nMode])
-### Shutdown(nFlags)
-    Return: Integer
-### Sleep(nMilliseconds)
-### StatusbarGetText(szTitle [, szText] [, nPart] [, nBufSize])
+#### Send(szSendText [, nMode])
+#### Shutdown(nFlags)
+    Return: integer
+#### Sleep(nMilliseconds)
+#### StatusbarGetText(szTitle [, szText] [, nPart] [, nBufSize])
     Return: szStatusText
-### StatusbarGetText(hWnd [, nPart] [, nBufSize])
+#### StatusbarGetText(hWnd [, nPart] [, nBufSize])
     Return: szStatusText
 
-### ToolTip(szTip [, nX] [, nY])
+#### ToolTip(szTip [, nX] [, nY])
 
-### WinActivate(szTitle [, szText])
-    Return: Integer
-### WinActivate(hWnd)
-    Return: Integer
+#### WinActivate(szTitle [, szText])
+    Return: integer
+#### WinActivate(hWnd)
+    Return: integer
 
-### WinActive(szTitle [, szText])
-    Return: Integer
-### WinActive(hWnd)
-    Return: Integer
+#### WinActive(szTitle [, szText])
+    Return: integer
+#### WinActive(hWnd)
+    Return: integer
 
-### WinClose(szTitle [, szText])
-    Return: Integer
-### WinClose(hWnd)
-    Return: Integer    
+#### WinClose(szTitle [, szText])
+    Return: integer
+#### WinClose(hWnd)
+    Return: integer    
 
-### WinExists(szTitle [, szText])
-    Return: Integer
-### WinExists(hWnd)
-    Return: Integer    
+#### WinExists(szTitle [, szText])
+    Return: integer
+#### WinExists(hWnd)
+    Return: integer    
 
-### WinGetCaretPos()
+#### WinGetCaretPos()
     Return: lpPoint
 
-### WinGetClassList(szTitle [, szText] [, nBufSize])
+#### WinGetClassList(szTitle [, szText] [, nBufSize])
     Return: szRetText
-### WinGetClassList(hWnd [, nBufSize])
+#### WinGetClassList(hWnd [, nBufSize])
     Return: szRetText
 
-### WinGetClientSize(szTitle [, szText])
+#### WinGetClientSize(szTitle [, szText])
     Return: lpRect
-### WinGetClientSize(hWnd)
+#### WinGetClientSize(hWnd)
     Return: lpRect
 
-### WinGetHandle(szTitle [, szText])
+#### WinGetHandle(szTitle [, szText])
     Return: hWnd
-### WinGetHandleAsText(szTitle [, szText] [, nBufSize])
+#### WinGetHandleAsText(szTitle [, szText] [, nBufSize])
     Return: szRetText
 
-### WinGetPos(szTitle [, szText])
+#### WinGetPos(szTitle [, szText])
     Return: lpRect
-### WinGetPos(hWnd)
+#### WinGetPos(hWnd)
     Return: lpRect
 
-### WinGetProcess(szTitle [, szText])
-    Return: Integer
-### WinGetProcess(hWnd)
-    Return: Integer
+#### WinGetProcess(szTitle [, szText])
+    Return: integer
+#### WinGetProcess(hWnd)
+    Return: integer
 
-### WinGetState(szTitle [, szText])
-    Return: Integer
-### WinGetState(hWnd)
-    Return: Integer
+#### WinGetState(szTitle [, szText])
+    Return: integer
+#### WinGetState(hWnd)
+    Return: integer
 
-### WinGetText(szTitle [, szText] [, nBufSize])
+#### WinGetText(szTitle [, szText] [, nBufSize])
     Return: szRetText
-### WinGetText(hWnd [, nBufSize])
+#### WinGetText(hWnd [, nBufSize])
     Return: szRetText
     
-### WinGetTitle(szTitle [, szText] [, nBufSize])
+#### WinGetTitle(szTitle [, szText] [, nBufSize])
     Return: szRetText
-### WinGetTitle(hWnd [, nBufSize])
+#### WinGetTitle(hWnd [, nBufSize])
     Return: szRetText
 
-### WinKill(szTitle [, szText])
-    Return: Integer
-### WinKill(hWnd)
-    Return: Integer
+#### WinKill(szTitle [, szText])
+    Return: integer
+#### WinKill(hWnd)
+    Return: integer
 
-### WinMenuSelectItem(szTitle [, szText], szItem1 [, szItem2] [, szItem3] [, szItem4] [, szItem5] [, szItem6] [, szItem7] [, szItem8])
-    Return: Integer
-### WinMenuSelectItem(hWnd, szItem1 [, szItem2] [, szItem3] [, szItem4] [, szItem5] [, szItem6] [, szItem7] [, szItem8])
-    Return: Integer
+#### WinMenuSelectItem(szTitle [, szText], szItem1 [, szItem2] [, szItem3] [, szItem4] [, szItem5] [, szItem6] [, szItem7] [, szItem8])
+    Return: integer
+#### WinMenuSelectItem(hWnd, szItem1 [, szItem2] [, szItem3] [, szItem4] [, szItem5] [, szItem6] [, szItem7] [, szItem8])
+    Return: integer
     
-### WinMinimizeAll()
-### WinMinimizeAllUndo();
+#### WinMinimizeAll()
+#### WinMinimizeAllUndo();
     
-### WinMove(szTitle [, szText], nX, nY [, nWidth] [, nHeight])
-    Return: Integer
-### WinMove(hWnd, nX, nY [, nWidth] [, nHeight])
-    Return: Integer
+#### WinMove(szTitle [, szText], nX, nY [, nWidth] [, nHeight])
+    Return: integer
+#### WinMove(hWnd, nX, nY [, nWidth] [, nHeight])
+    Return: integer
 
-### WinSetOnTop(szTitle [, szText], nFlag)
-    Return: Integer
-### WinSetOnTop(hWnd, nFlag)
-    Return: Integer
+#### WinSetOnTop(szTitle [, szText], nFlag)
+    Return: integer
+#### WinSetOnTop(hWnd, nFlag)
+    Return: integer
 
-### WinSetState(szTitle [, szText], nFlags)
-    Return: Integer
-### WinSetState(hWnd, nFlags)
-    Return: Integer
+#### WinSetState(szTitle [, szText], nFlags)
+    Return: integer
+#### WinSetState(hWnd, nFlags)
+    Return: integer
 
-### WinSetTitle(szTitle [, szText], szNewTitle)
-    Return: Integer
-### WinSetTitle(hWnd, szNewTitle)
-    Return: Integer
+#### WinSetTitle(szTitle [, szText], szNewTitle)
+    Return: integer
+#### WinSetTitle(hWnd, szNewTitle)
+    Return: integer
 
-### WinSetTrans(szTitle [, szText], nTrans)
-    Return: Integer
-### WinSetTrans(hWnd, nTrans)
-    Return: Integer
+#### WinSetTrans(szTitle [, szText], nTrans)
+    Return: integer
+#### WinSetTrans(hWnd, nTrans)
+    Return: integer
 
-### WinWait(szTitle [, szText] [, nTimeout])
-    Return: Integer
-### WinWait(hWnd [, nTimeout])
-    Return: Integer
+#### WinWait(szTitle [, szText] [, nTimeout])
+    Return: integer
+#### WinWait(hWnd [, nTimeout])
+    Return: integer
 
-### WinWaitActive(szTitle [, szText] [, nTimeout])
-    Return: Integer
-### WinWaitActive(hWnd [, nTimeout])
-    Return: Integer
+#### WinWaitActive(szTitle [, szText] [, nTimeout])
+    Return: integer
+#### WinWaitActive(hWnd [, nTimeout])
+    Return: integer
     
-### WinWaitClose(szTitle [, szText] [, nTimeout])
-    Return: Integer
-### WinWaitClose(hWnd [, nTimeout])
-    Return: Integer
+#### WinWaitClose(szTitle [, szText] [, nTimeout])
+    Return: integer
+#### WinWaitClose(hWnd [, nTimeout])
+    Return: integer
     
-### WinWaitNotActive(szTitle [, szText] [, nTimeout])
-    Return: Integer
-### WinWaitNotActive(hWnd [, nTimeout])
-    Return: Integer
+#### WinWaitNotActive(szTitle [, szText] [, nTimeout])
+    Return: integer
+#### WinWaitNotActive(hWnd [, nTimeout])
+    Return: integer
 
-### PostMessage(hWnd, msg [, wParam] [, lParam])
-        Return: Integer
+#### PostMessage(hWnd, nMsg [, nWParam] [, nLParam])
+        Return: integer
 
-### SendMessage(hWnd, msg [, wParam] [, lParam])
-        Return: Integer
+#### SendMessage(hWnd, nMsg [, nWParam] [, nLParam])
+        Return: integer
 
 ## License
 
