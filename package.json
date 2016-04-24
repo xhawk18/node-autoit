@@ -1,6 +1,6 @@
 {
   "name": "autoit",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "description": "nodejs autoit(x) wrapper",
   "license": "MIT",
   "repository": {
@@ -26,6 +26,7 @@
     "AutoItX3_DLL.h"
   ],
   "keywords": [
+    "autoit",
     "nodejs",
     "ffi"
   ],
