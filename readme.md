@@ -30,11 +30,11 @@ au.Send("Hello, autoit & nodejs!");
         ControlCommand(szTitle [, szText], szControl, szCommand [, szExtra] [, nBufSize])
     you can call it with the last two parameters omitted --
 ```js
-        au.ControlCommand("[Class:Notepad]", "", "[CLASS:Edit]", "IsVisible")
+    au.ControlCommand("[Class:Notepad]", "", "[CLASS:Edit]", "IsVisible")
 ```
     If you would like to use the default value of second parameters "szText", please fill it with undefined,
 ```js
-        au.ControlCommand("[Class:Notepad]", undefined, "[CLASS:Edit]", "IsVisible")
+    au.ControlCommand("[Class:Notepad]", undefined, "[CLASS:Edit]", "IsVisible")
 ```
 
 ### API list
