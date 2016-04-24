@@ -202,6 +202,7 @@ au.Send("Hello, autoit & nodejs!");
     Return: szStatusText
 
 #### ToolTip(szTip [, nX] [, nY])
+    Return: none
 
 #### WinActivate(szTitle [, szText])
     Return: integer
