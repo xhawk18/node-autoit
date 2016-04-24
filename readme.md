@@ -39,6 +39,7 @@ au.Send("Hello, autoit & nodejs!");
 
 ### API list
 #### Init()
+    Return: none
 
 #### error()
     Return: integer
@@ -50,6 +51,7 @@ au.Send("Hello, autoit & nodejs!");
     Return: szClip
 
 #### ClipPut(szClip)
+    Return: none
 
 #### ControlClick(szTitle [, szText], szControl [, szButton] [, nNumClicks] [, nX] [, nY])
     Return: integer
@@ -147,6 +149,7 @@ au.Send("Hello, autoit & nodejs!");
 #### MouseClickDrag(szButton, nX1, nY1, nX2, nY2 [, nSpeed])
     Return: integer
 #### MouseDown([szButton])
+    Return: none
 #### MouseGetCursor()
     Return: integer
 #### MouseGetPos()
@@ -154,7 +157,9 @@ au.Send("Hello, autoit & nodejs!");
 #### MouseMove(nX, nY [, nSpeed])
     Return: integer
 #### MouseUp([szButton])
+    Return: none
 #### MouseWheel(szDirection, nClicks)
+    Return: none
 
 #### Opt(szOption, nValue)
     Return: integer
@@ -186,9 +191,11 @@ au.Send("Hello, autoit & nodejs!");
     Return: integer
 
 #### Send(szSendText [, nMode])
+    Return: none
 #### Shutdown(nFlags)
     Return: integer
 #### Sleep(nMilliseconds)
+    Return: none
 #### StatusbarGetText(szTitle [, szText] [, nPart] [, nBufSize])
     Return: szStatusText
 #### StatusbarGetText(hWnd [, nPart] [, nBufSize])
@@ -270,7 +277,9 @@ au.Send("Hello, autoit & nodejs!");
     Return: integer
     
 #### WinMinimizeAll()
-#### WinMinimizeAllUndo();
+    Return: none
+#### WinMinimizeAllUndo()
+    Return: none
     
 #### WinMove(szTitle [, szText], nX, nY [, nWidth] [, nHeight])
     Return: integer
@@ -318,10 +327,10 @@ au.Send("Hello, autoit & nodejs!");
     Return: integer
 
 #### PostMessage(hWnd, nMsg [, nWParam] [, nLParam])
-        Return: integer
+    Return: integer
 
 #### SendMessage(hWnd, nMsg [, nWParam] [, nLParam])
-        Return: integer
+    Return: integer
 
 ## License
 
