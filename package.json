@@ -15,8 +15,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "files": [
     "index.js",
     "wchar.js",
@@ -31,20 +30,19 @@
     "ffi"
   ],
   "dependencies": {
-    "ffi": "2.0.0",
-    "ref": "1.2.0",
-    "ref-struct": "1.0.2",
-    "iconv": "~2.1.10"
+    "ffi": ">=2.0.0",
+    "ref": ">=1.2.0",
+    "ref-struct": ">=1.0.2",
+    "iconv-lite": ">=0.4.11"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "readme": "",
   "readmeFilename": "readme.md",
   "bugs": {
     "url": "https://github.com/xhawk18/node-autoit/issues"
   },
   "homepage": "https://github.com/xhawk18/node-autoit#readme",
-  "_id": "autoit@1.0.0",
+  "_id": "autoit@1.1.8",
   "_shasum": "",
   "_resolved": "https://registry.npmjs.org/autoit/-/autoit-1.0.0.tgz",
   "_from": ""

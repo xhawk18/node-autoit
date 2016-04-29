@@ -1521,7 +1521,7 @@ var PostMessage = ffi.ForeignFunction(symbol, 'int', [HWND, UINT, WPARAM, LPARAM
 $.PostMessage = function(hWnd, msg, wParam, lParam){
     if(wParam === undefined) wParam = 0;
     if(lParam === undefined) lParam = 0;
-    PostMessage(hWnd, msg, wParam, lParam);
+    return PostMessage(hWnd, msg, wParam, lParam);
 }
 
 var symbol = user32dll_handle.get('SendMessageW');
@@ -1529,7 +1529,7 @@ var SendMessage = ffi.ForeignFunction(symbol, 'int', [HWND, UINT, WPARAM, LPARAM
 $.SendMessage = function(hWnd, msg, wParam, lParam){
     if(wParam === undefined) wParam = 0;
     if(lParam === undefined) lParam = 0;
-    SendMessage(hWnd, msg, wParam, lParam);
+    return SendMessage(hWnd, msg, wParam, lParam);
 }
 
 var symbol = user32dll_handle.get('GetDlgCtrlID');
@@ -1537,5 +1537,7 @@ $.GetDlgCtrlID = ffi.ForeignFunction(symbol, 'int', [HWND]);
 
 $.RECT = RECT;
 $.POINT = POINT;
+
+$.user32dll_handle = user32dll_handle;
 
 module.exports = $;
