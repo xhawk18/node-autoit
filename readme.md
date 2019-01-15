@@ -6,6 +6,12 @@
 $ npm install --save autoit
 ```
 
+node-gyp is required to install this module.
+If you failed to install this module, please check this page to install node-gyp,
+and try to run "npm install --save autoit" again.
+
+   https://www.npmjs.com/package/node-gyp
+
 ## Usage
 
 ```js
