@@ -1341,7 +1341,7 @@ var dll = get_dll();
 if(dll === null)
     throw new Error('autoit can not run on this platform!');
 
-var autoit_dll = ffi.Library(path.join(__dirname, dll), autoit_functions);
+var autoit_dll = ffi.Library(path.join(process.cwd(), dll), autoit_functions);
 
 function modify_func(func){
     var old_func = autoit_dll[func];
